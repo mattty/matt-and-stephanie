@@ -7,41 +7,93 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <style>
-      .dates {
-        margin-top: 20px;
-        margin-bottom: 10px;
-        font-size: 24px;
-        color: grey;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script src="helpers.js"></script>
+
     <title>Matt and Stephanie</title>
     <!-- start Mixpanel -->
-    <script type="text/javascript">
-      (function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
-      for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2.2.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
-      mixpanel.init("76bc27ffccf8591e0623c5a292df4743");
+   <script type="text/javascript">
+    //   (function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+    //   for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2.2.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+    //   mixpanel.init("76bc27ffccf8591e0623c5a292df4743");
     </script>
     <!-- end Mixpanel -->
-  </head>
-  <body>
-    <div class="container" style="padding-top:20px;">
+  </head> 
+  <body onload="javascript:timeLeft()">
+    <div class="container-fluid full-bleed" style="padding-top:20px;">
       <div class="row-fluid">
-        <div class="col-md-7">
-          <img src="https://s3.amazonaws.com/matt-and-stephanie/Photos/tomales_bay.jpg" class="image-responsive"></img>
+
+        <div class="col-md-6 full-bleed">
+          <img src="https://s3.amazonaws.com/matt-and-stephanie/Photos/tomales_bay.jpg" class="img-responsive full-bleed"></img>
         </div>
-        <div class="col-md-5">
-          <h1>Matt and Stephanie</h1>
-          <div class="dates">
-            First met: 2nd October 2005<br />
-            Engaged: 14th May 2014<br />
-            Married: TBD
+        
+        <div class="col-md-6" id="selection-pane" style="margin-top:20px;">
+          
+          <div id="Info">
+            <h2>Matt and Stephanie</h2>
+            <p class="lead">
+              are getting married <span id="time_left"></span><br />
+              on 26th April 2015<br />
+              at <a href="https://goo.gl/maps/7cbuQ" target="_blank">Cripps Barn, Bibury, UK</a>
+            </p>
           </div>
+                  
+          <!-- <span id="plus-sign" class="glyphicon glyphicon-plus-sign" onclick="btnClick('plus-sign')"></span>   -->
+
+<!-- option 1 -->
+<!--           <div id="nav" class="btn-group btn-group-justified" style="margin-left=-15px;padding-left=0;padding-top:20px;padding-bottom:20px;">
+            <a id="btn-story" class="btn btn-default" onclick="btnClick('story');">Story</a>
+            <a id="btn-rsvp" class="btn btn-default" onclick="btnClick('rsvp');">RSVP</a>
+            <a id="btn-travel" class="btn btn-default" onclick="btnClick('travel');">Travel</a>
+            <a id="btn-registry" class="btn btn-default" onclick="btnClick('registry');">Registry</a>
+          </div> -->
+
+
+          
+          <div id="Story" class="hidden">
+            <h2>Our Story</h2>
+            <p class="lead">
+              First met: 2nd October 2005<br />
+              Engaged: 14th May 2014<br />
+              Married: TBD
+            </p>
+          </div>
+          <div id="RSVP" class="hidden">
+            <h2>RSVP</h2>
+            <p class="lead">Invitations coming soon!</p>
+          </div>
+          <div id="Travel" class="hidden">
+            <h2>Travel</h2>
+            <p class="lead">Travel</p>
+          </div>
+          <div id="Registry" class="hidden">
+            <h2>Registry</h2> 
+            <p class="lead">Registry details coming soon!</p>
+          </div>
+          
        </div>
       </div>
+    </div> 
+    
+
+
+    <!-- footer -->
+ <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+    <div class="container-fluid">
+      <div class="row footer">
+          <div class="col-xs-2 col-xs-offset-1">
+            <a onclick="subContent('previous');"><span class="glyphicon glyphicon-chevron-left"></span></a>
+          </div>
+          <div class="col-xs-6 text-center">
+            <b><span id="current-selection">Info</span></b>
+          </div>
+          <div class="col-xs-2">
+            <a onclick="subContent('next');"><span class="glyphicon glyphicon-chevron-right"></span></a>
+          </div>
+        </div>
+      </div>
     </div>
-    <script>
-      mixpanel.track("Page load");
-    </script>
+</nav>
   </body>
 </html>
+
