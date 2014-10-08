@@ -1,19 +1,10 @@
 function btnClick(element) {
-  if (element == 'plus-sign') {
-    d = document.getElementById('nav')
-    if (d.className.indexOf('hidden') > -1) {
-      d.className = 'btn-group btn-group-justified'
-    } else {
-      d.className = d.className + " hidden"
-    }
-  } 
-  var arr = ['info','story','rsvp','travel','registry'] ;
+  var arr = ['Info','Story','RSVP','Travel','Registry'] ;
   var arrLen = arr.length;
   for (var i = 0; i < arrLen; i++) {
     if (arr[i] == element) {
       document.getElementById(arr[i]).className = "" ;
-      var d2 = document.getElementById("btn-" + arr[i])
-      d2.className = d2.className + " active" ;
+      document.getElementById("btn-" + arr[i]).className = "btn btn-default active" ;
     } else {
       document.getElementById(arr[i]).className = "hidden" ;
       document.getElementById("btn-" + arr[i]).className = "btn btn-default" ;
