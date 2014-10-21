@@ -5,6 +5,7 @@ function btnClick(element) {
     if (arr[i] == element) {
       document.getElementById(arr[i]).className = "" ;
       document.getElementById("btn-" + arr[i]).className = "btn btn-default active" ;
+      mixpanel.track("Section header click", {"button": element}) ;
     } else {
       document.getElementById(arr[i]).className = "hidden" ;
       document.getElementById("btn-" + arr[i]).className = "btn btn-default" ;
@@ -40,11 +41,8 @@ function subContent(direction) {
     }
   }
   document.getElementById('current-selection').innerHTML = element ;
+  mixpanel.track("Section arrow click", {"direction": direction, "shown": element}) ;
 };
-
-
-
-
 
 function timeLeft() {
   var w_date = new Date(2015,3,26);
