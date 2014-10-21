@@ -5,7 +5,7 @@ function btnClick(element) {
     if (arr[i] == element) {
       document.getElementById(arr[i]).className = "" ;
       document.getElementById("btn-" + arr[i]).className = "btn btn-default active" ;
-      mixpanel.track("Section header click", {"button": element}) ;
+      mixpanel.track("Section header click", {"shown": element}) ;
     } else {
       document.getElementById(arr[i]).className = "hidden" ;
       document.getElementById("btn-" + arr[i]).className = "btn btn-default" ;
