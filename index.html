@@ -12,184 +12,77 @@
     <script src="mixpanel.js"></script>
     <title>Matt and Stephanie</title>
   </head> 
-  <body onload="javascript:timeLeft()">
-    <div class="container-fluid full-bleed" style="padding-top:20px;">
-      <div class="row-fluid">
-
-        <div class="col-md-6 full-bleed">
-          <img src="https://s3.amazonaws.com/matt-and-stephanie/Photos/tomales_bay.jpg" class="img-responsive full-bleed"></img>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="big-img">
+          <img src="https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/00.jpg" class="img-responsive">
+          <h1 class="title-float"><span>Stephanie + Matt<br/>Cripps Barn<br />2015-04-26</span></h1>
         </div>
+      </div>
         
-        <div class="col-md-6" style="margin-top:20px;">
-          <div class="row-fluid hidden-xs hidden-sm">
-            <div id="nav" class="btn-group btn-group-justified" style="margin-left=-15px;padding-left=0;padding-top:20px;padding-bottom:20px;">
-              <a id="btn-Info" class="btn btn-default active" onclick="btnClick('Info');">Info</a>
-              <a id="btn-Story" class="btn btn-default" onclick="btnClick('Story');">Story</a>
-              <a id="btn-RSVP" class="btn btn-default" onclick="btnClick('RSVP');">RSVP</a>
-              <a id="btn-Travel" class="btn btn-default" onclick="btnClick('Travel');">Travel</a>
-              <a id="btn-Registry" class="btn btn-default" onclick="btnClick('Registry');">Registry</a>
-            </div>
-          </div>
-          <div class="row-fluid" id="selection-pane">
-
-          <!-- Info -->
-            <div id="Info">
-              <h2>Matt and Stephanie</h2>
-              <p class="lead">
-                are getting married <span id="time_left"></span><br />
-                on 26th April 2015<br />
-                at <a href="https://goo.gl/maps/7cbuQ" target="_blank">Cripps Barn, Bibury, UK</a>
-              </p>
-              <p class="lead">
-                <span class="glyphicon glyphicon-envelope"></span> <a href="mailto:wedding@mattandstephanie.net">wedding@mattandstephanie.net</a>
-              </p>
-              <div id="day-of-details" class="hidden">
-                <h3>On the Day</h3>
-                <dl class="dl-horizontal">
-                  <dt>Saturday 25th April</dt>
-                  <dd>7.00pm - Join us for a few drinks on the eve of the big day</dd>
-                  <dt>Sunday 26th April</dt>
-                  <dd>
-                    2.30pm - Ceremony<br />
-                    3.45pm - Drinks reception and photos<br />
-                    5.00pm - Wedding breakfast<br />
-                    7.00pm - Speeches and toasts<br />
-                    8.00pm - Drinking and dancing
-                  </dd>
-                  <dt>Monday 27th April</dt>
-                  <dd>11.00am - Join us for brunch if you are staying in the area</dd>
-                </dl>
-              </div>
-            </div>
-                    
-          <!-- Story -->
-            <div id="Story" class="hidden">
-              <h2>Our Story</h2>
-                <p class="lead">
-                  First met: 2nd October 2005<br />
-                  Engaged: 14th May 2014<br />
-                  Married: 26th April 2015
-                </p>
-                <p class="lead">
-                  2005: Stephanie and Matt meet at the London School of Economics, where Stephanie is studying for a year abroad and Matt is in his final year along with his groomsman, Simon. Stephanie and Matt first meet while he is representing the LSE Music Society at Fresher’s Fair - Stephanie joins the mailing list and receives a non-official Music Society email a few days later.
-                </p>
-                <p class="lead">
-                  2006: Stephanie returns to Chicago for her final year of college; Matt joins for three months over the summer. Hyde Park adventures are had, along with Stephanie’s then roommate and bridesmaid, Maomao.
-                </p>
-                <p class="lead">
-                  2007: Stephanie moves to New York City to begin working for Standard Chartered Bank. Matt begins working at eBay in London. Much money is spent on air travel.
-                </p>
-                <p class="lead">
-                  2008: Matt moves to Skype in London, Stephanie remains at Standard Chartered in New York. More money is spent on air travel.
-                </p>
-                <p class="lead">
-                  2009: Stephanie moves to London, having accepted an offer for an internal transfer. She lives in Shoreditch with her best friend and matron of honour, Becky, who is spending the year studying at the London College of Fashion.
-                </p>
-                <p class="lead">
-                  2010: Stephanie and Matt enjoy the novelty of living in the same city, like a normal couple.
-                </p>
-                <p class="lead">
-                  2011: Matt leaves for Harvard Business School in Boston, while Stephanie stays in London. Matt meets Andrew at HBS, eventual San Francisco neighbor and his best man. Transatlantic travel resumes.
-                </p>
-                <p class="lead">
-                  2012: Matt interns at IFTTT in San Francisco; Stephanie visits for a couple of weeks to see what living in SF might be like, never having been west of Austin, TX.
-                </p>
-                <p class="lead">
-                  2013: Matt finishes business school and Stephanie leaves her job in London. They arrive in San Francisco within a day of each other. Their boxes from London arrive three months later, having enjoyed the scenic route through the Panama Canal.
-                </p>
-                <p class="lead">
-                  2014: Matt asks Stephanie to marry him – she says yes.
-                </p>
-                <p class="lead">
-                  26 April 2015: PARTY TIME.
-                </p>
-            </div>
-
-          <!-- RSVP -->
-            <div id="RSVP" class="hidden">
-              <h2>RSVP</h2>
-              <p class="lead">Invitations coming soon!</p>
-            </div>
-
-          <!-- Travel & Accommodation -->
-            <div id="Travel" class="hidden">
-              <h2>Travel</h2>
-
-              <h3>Getting There</h3>
-              <p class="lead">
-                Cripps Barn is located in Bibury - a small village in the Cotswolds - an hour and a half northwest of London.
-              </p>
-              <p class="lead">
-                For international guests, we recommend flying into London Heathrow (LHR) and renting a car to travel to Bibury. The full address for the venue is Cripps Barn, Fosscross Lane, Near Bibury, Gloucestershire, GL7 5BA. The GPS co-ordinates for Sat Nav are N51° 46.039’ W1° 52.573’.
-              </p>
-              <p class="lead">
-                Alternatively, you can take a coach to Cirencester (<a href="http://www.nationalexpress.com/home.aspx">National Express</a>; the 444 to Hereford), which would be a 15 minute taxi ride to Cripps Barn. Or, take a train to Swindon (<a href="http://www.nationalrail.co.uk/">National Rail</a>), which would then be a 40 minute taxi ride to Cripps Barn.
-              </p>
-
-              <h3>Getting Around</h3>
-              <p class="lead">
-                There is plenty of parking at Cripps Barn and you are welcome to leave cars parked overnight until 10am the following morning, as long as they are parked away from the buildings to avoid obstructing early morning deliveries.
-              </p>
-              <p class="lead">
-                There will be a taxi service on standby the evening of the wedding, and additional local firms can be found <a href="http://www.crippsbarnhire.com/local_info.php?section=taxis">here</a>.
-              </p>
-
-              <h3>Accommodation</h3>
-              <p class="lead">
-                There is a variety of accommodation options nearby, here are some we recommend: 
-              </p>
-              <ul class="list-unstyled">
-                <li class="spaced"><a href="http://www.new-inn.co.uk/">The New Inn</a> - a lovely pub 5 miles from Cripps Barn and run by the same folk. 15 rooms from £60 to £190 per night. Quote our names and wedding date for a 10% discount.</li>
-                <li class="spaced"><a href="http://www.biburycourt.com/">Bibury Court</a> - a stunning country house hotel 2 miles from Cripps Barn. Room rates range from £125 to £345.</li>
-                <li class="spaced"><a href="http://www.travelodge.co.uk/search_and_book/hotel_overview.php?hotel_id=86">Cirencester Travelodge</a> - nearby budget option. Double rooms start at £29 if you book in advance.</li>
-                <li class="spaced">Feeling adventurous? You can <a href="http://www.crippsbarnhire.com/camping.php">camp onsite at Cripps Barn</a>! Bring your own tent, or <a href="http://thecanvascottagecompany.co.uk/">have someone do it for you</a></li>
-                <li class="spaced">There are also a number of delightful B&Bs in the area as well as self-catering cottages that would be well-suited for groups and families. <a href="http://www.crippsbarnbibury.com/local_info.php">Click here</a> for a list of options.</li>
-              </ul>
-
-              <h3>Things to do</h3>
-              <p class="lead">
-                Bibury is a lovely part of the Cotswolds, with lush rolling hills and honey-coloured limestone villages. In addition to taking in views of the English countryside, here are a few suggested activities during your time here.
-              </p>
-              <ul class="list-unstyled">
-                <li class="spaced"><a href="http://www.cotswoldfarmpark.co.uk/">Cotswald Farm Park</a> - Home to more than 50 rare breeds and a great family destination as children can touch the animals and help feed them.</li>
-                <li class="spaced"><a href="http://www.cirencesterpark.co.uk/index.php?mpl=17">Cirencester Park</a> - A majestic country house exemplifying some of the finest geometric landscaping in the country.</li>
-                <li class="spaced"><a href="http://www.cotswold-inns-hotels.co.uk/property/the_swan_hotel/restaurant.htm">The Swan Brasserie</a> - Seasonally influenced European-style food alongside fine wines; also a hotel.</li>
-              </ul>
-            </div>
-
-          <!-- Registry -->
-            <div id="Registry" class="hidden">
-              <h2>Registry</h2> 
-              <p class="lead">Registry details coming soon!</p>
-            </div>
-            
-
-         </div>
+      
+      <div class="row" style="padding-top:30px;">
+        <div class="col-md-6 col-md-offset-3">
+          <p class="lead">
+            Thank you so much for joining us and making our day so special! Scroll down for some photo highlights, and follow the link at the bottom for more photos (inc. high resolution in case you'd like to print any for yourselves).
+            <br/>
+            Love,<br/>The Boys
+          </p>
         </div>
-      </div> 
-    
-
-
-    <!-- footer nav mobile-->
-     <nav class="navbar navbar-default navbar-fixed-bottom hidden-md hidden-lg" role="navigation">
-        <div class="container-fluid">
-          <div class="row footer">
-              <div class="col-xs-2 col-xs-offset-1">
-                <a onclick="subContent('previous');"><span class="glyphicon glyphicon-chevron-left"></span></a>
-              </div>
-              <div class="col-xs-6 text-center">
-                <b><span id="current-selection">Info</span></b>
-              </div>
-              <div class="col-xs-2">
-                <a onclick="subContent('next');"><span class="glyphicon glyphicon-chevron-right"></span></a>
-              </div>
-            </div>
-          </div>
-        </div>
-    </nav>
-    <script>
-      mixpanel.track("Page load");
-    </script>
+      </div>
+        
+      
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src="https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/01.jpg" class="img-responsive padded-top"></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/02.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/03.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/04.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/05.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/06.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/07.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/08.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/09.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/10.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/11.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/12.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/13.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/14.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/15.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/16.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/17.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/18.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/19.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/20.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/21.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/22.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/23.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/24.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/25.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/26.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/27.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/28.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/29.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/30.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/31.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/32.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/33.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/34.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/35.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/36.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/37.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/38.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/39.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/40.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/41.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/42.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/43.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/44.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/45.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/46.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/47.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/48.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/49.jpg' class='img-responsive padded-top'></div></div>
+      <div class="row"><div class="col-md-8 col-md-offset-2"><img src='https://s3.amazonaws.com/matt-and-stephanie/Photos/slideshow/50.jpg' class='img-responsive padded-top'></div></div>
+    </div>
   </body>
 </html>
-
